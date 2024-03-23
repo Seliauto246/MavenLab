@@ -2,11 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
-    <classes>
-      <class name="testScenarios.SwitchingWindows"/>
-      <class name="testScenarios.PracticePage"/>
-      <class name="testScenarios.DynamicData"/>
-      <class name="testScenarios.MouseHover"/>
-    </classes>
+    <packages>
+	<package name="testScenarios"></package>
+	<package name="Pratice"></package>
+		
+	</packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

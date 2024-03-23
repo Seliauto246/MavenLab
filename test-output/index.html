@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">16 methods,   16 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -157,6 +157,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Pratice.textBox" class="method navigator-link" hash-for-method="dropdown">dropdown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testScenarios.PracticePage" class="method navigator-link" hash-for-method="mouseHover">mouseHover</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -190,14 +195,29 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testScenarios.DynamicData</span>
+              <span class="class-name">testScenarios.MouseHover</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="MathCal">
-                  </a> <!-- MathCal -->
-                  <span class="method-name">MathCal</span>
+                  <a name="draganddrop">
+                  </a> <!-- draganddrop -->
+                  <span class="method-name">draganddrop</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Pratice.textBox</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dropdown">
+                  </a> <!-- dropdown -->
+                  <span class="method-name">dropdown</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -313,6 +333,21 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">testScenarios.DynamicData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MathCal">
+                  </a> <!-- MathCal -->
+                  <span class="method-name">MathCal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testScenarios.SwitchingWindows</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -321,21 +356,6 @@
                   <a name="switchWin">
                   </a> <!-- switchWin -->
                   <span class="method-name">switchWin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScenarios.MouseHover</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="draganddrop">
-                  </a> <!-- draganddrop -->
-                  <span class="method-name">draganddrop</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -351,11 +371,17 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test name=&quot;Test&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;testScenarios&quot;/&gt;
+      &lt;package name=&quot;Pratice&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testScenarios.SwitchingWindows&quot;/&gt;
-      &lt;class name=&quot;testScenarios.PracticePage&quot;/&gt;
       &lt;class name=&quot;testScenarios.DynamicData&quot;/&gt;
+      &lt;class name=&quot;testScenarios.SwitchingWindows&quot;/&gt;
       &lt;class name=&quot;testScenarios.MouseHover&quot;/&gt;
+      &lt;class name=&quot;testScenarios.PracticePage&quot;/&gt;
+      &lt;class name=&quot;Pratice.textBox&quot;/&gt;
+      &lt;class name=&quot;Pratice.button&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -369,7 +395,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (4 classes)</span>
+                <span class="test-name">Test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -395,72 +421,76 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'switchWin')
-data.setCell(0, 2, 'testScenarios.SwitchingWindows')
-data.setCell(0, 3, 52871);
+data.setCell(0, 1, 'dropdown')
+data.setCell(0, 2, 'Pratice.textBox')
+data.setCell(0, 3, 9974);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'SwitchWindow')
 data.setCell(1, 2, 'testScenarios.PracticePage')
-data.setCell(1, 3, 6692);
+data.setCell(1, 3, 6370);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'switchalrt')
-data.setCell(2, 2, 'testScenarios.PracticePage')
-data.setCell(2, 3, 4475);
+data.setCell(2, 1, 'switchWin')
+data.setCell(2, 2, 'testScenarios.SwitchingWindows')
+data.setCell(2, 3, 5748);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'CheckBox')
+data.setCell(3, 1, 'switchalrt')
 data.setCell(3, 2, 'testScenarios.PracticePage')
-data.setCell(3, 3, 4150);
+data.setCell(3, 3, 4138);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'draganddrop')
 data.setCell(4, 2, 'testScenarios.MouseHover')
-data.setCell(4, 3, 2651);
+data.setCell(4, 3, 2668);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'MathCal')
 data.setCell(5, 2, 'testScenarios.DynamicData')
-data.setCell(5, 3, 2203);
+data.setCell(5, 3, 2260);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'RadioButton')
+data.setCell(6, 1, 'CheckBox')
 data.setCell(6, 2, 'testScenarios.PracticePage')
-data.setCell(6, 3, 2007);
+data.setCell(6, 3, 1984);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'mouseHover')
 data.setCell(7, 2, 'testScenarios.PracticePage')
-data.setCell(7, 3, 1677);
+data.setCell(7, 3, 1581);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'writeWT')
+data.setCell(8, 1, 'EnableDisable')
 data.setCell(8, 2, 'testScenarios.PracticePage')
-data.setCell(8, 3, 943);
+data.setCell(8, 3, 1313);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'EnableDisable')
+data.setCell(9, 1, 'RadioButton')
 data.setCell(9, 2, 'testScenarios.PracticePage')
-data.setCell(9, 3, 940);
+data.setCell(9, 3, 1168);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'MultipleSelect')
+data.setCell(10, 1, 'Webtabledata')
 data.setCell(10, 2, 'testScenarios.PracticePage')
-data.setCell(10, 3, 707);
+data.setCell(10, 3, 824);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'Webtabledata')
+data.setCell(11, 1, 'MultipleSelect')
 data.setCell(11, 2, 'testScenarios.PracticePage')
-data.setCell(11, 3, 624);
+data.setCell(11, 3, 696);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'DropDown')
+data.setCell(12, 1, 'writeWT')
 data.setCell(12, 2, 'testScenarios.PracticePage')
-data.setCell(12, 3, 617);
+data.setCell(12, 3, 694);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'compareData')
+data.setCell(13, 1, 'DropDown')
 data.setCell(13, 2, 'testScenarios.PracticePage')
-data.setCell(13, 3, 1);
+data.setCell(13, 3, 580);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'ReadWT')
+data.setCell(14, 1, 'compareData')
 data.setCell(14, 2, 'testScenarios.PracticePage')
-data.setCell(14, 3, 0);
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'ReadWT')
+data.setCell(15, 2, 'testScenarios.PracticePage')
+data.setCell(15, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -494,78 +524,85 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testScenarios.SwitchingWindows</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">switchWin</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testScenarios.PracticePage</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">CheckBox</span>
-                <span class="method-start">52872 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">RadioButton</span>
-                <span class="method-start">57023 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SwitchWindow</span>
-                <span class="method-start">59031 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">testScenarios.DynamicData</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">MathCal</span>
-                <span class="method-start">65724 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScenarios.MouseHover</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">draganddrop</span>
-                <span class="method-start">67928 ms</span>
+                <span class="method-start">2260 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Pratice.textBox</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">dropdown</span>
+                <span class="method-start">4930 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testScenarios.PracticePage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CheckBox</span>
+                <span class="method-start">14905 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RadioButton</span>
+                <span class="method-start">16890 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SwitchWindow</span>
+                <span class="method-start">18058 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testScenarios.SwitchingWindows</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">switchWin</span>
+                <span class="method-start">24430 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScenarios.PracticePage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">DropDown</span>
-                <span class="method-start">70580 ms</span>
+                <span class="method-start">30179 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">MultipleSelect</span>
-                <span class="method-start">71198 ms</span>
+                <span class="method-start">30759 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EnableDisable</span>
-                <span class="method-start">71905 ms</span>
+                <span class="method-start">31455 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">switchalrt</span>
-                <span class="method-start">72846 ms</span>
+                <span class="method-start">32769 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">mouseHover</span>
-                <span class="method-start">77322 ms</span>
+                <span class="method-start">36909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">writeWT</span>
-                <span class="method-start">78999 ms</span>
+                <span class="method-start">38491 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ReadWT</span>
-                <span class="method-start">79942 ms</span>
+                <span class="method-start">39186 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Webtabledata</span>
-                <span class="method-start">79943 ms</span>
+                <span class="method-start">39187 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">compareData</span>
-                <span class="method-start">80567 ms</span>
+                <span class="method-start">40011 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
