@@ -35,6 +35,7 @@ public class javaStream {
 	List<String> lname = Arrays.asList("Eddie","Bokayo","Smith","Declane","William");
 	
 	lname.stream().filter(s->s.endsWith("e")).sorted().map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+
 		
 		
 		
